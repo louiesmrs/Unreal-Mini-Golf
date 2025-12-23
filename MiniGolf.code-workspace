@@ -1,0 +1,620 @@
+{
+	"folders": [
+		{
+			"name": "MiniGolf",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.6"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.mac": {
+			"PATH": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64:${env:PATH}",
+			"DOTNET_ROOT": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64",
+			"DOTNET_HOST_PATH": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "MiniGolf Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Debug",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Debug",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MiniGolf Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Debug",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"DebugGame",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"DebugGame",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MiniGolf Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"DebugGame",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Development",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Development",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MiniGolf Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Development",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Test",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Test",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MiniGolf Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Test",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Shipping",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Shipping",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MiniGolf Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolf Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolf",
+					"Mac",
+					"Shipping",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"Debug",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"Debug",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MiniGolfEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"Debug",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MiniGolfEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"Development",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"Development",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"MiniGolfEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "MiniGolfEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"MiniGolfEditor",
+					"Mac",
+					"Development",
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch MiniGolf (Debug)",
+				"request": "launch",
+				"program": "/Users/louie/code/Unreal Projects/MiniGolf/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "MiniGolf Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/MiniGolf": "/Users/louie/code/Unreal Projects/MiniGolf",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch MiniGolf (DebugGame)",
+				"request": "launch",
+				"program": "/Users/louie/code/Unreal Projects/MiniGolf/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "MiniGolf Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/MiniGolf": "/Users/louie/code/Unreal Projects/MiniGolf",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch MiniGolf (Development)",
+				"request": "launch",
+				"program": "/Users/louie/code/Unreal Projects/MiniGolf/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "MiniGolf Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/MiniGolf": "/Users/louie/code/Unreal Projects/MiniGolf",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch MiniGolf (Test)",
+				"request": "launch",
+				"program": "/Users/louie/code/Unreal Projects/MiniGolf/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "MiniGolf Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/MiniGolf": "/Users/louie/code/Unreal Projects/MiniGolf",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch MiniGolf (Shipping)",
+				"request": "launch",
+				"program": "/Users/louie/code/Unreal Projects/MiniGolf/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "MiniGolf Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/MiniGolf": "/Users/louie/code/Unreal Projects/MiniGolf",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch MiniGolfEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "MiniGolfEditor Mac Debug Build",
+				"args": [
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/MiniGolf": "/Users/louie/code/Unreal Projects/MiniGolf",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch MiniGolfEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "MiniGolfEditor Mac DebugGame Build",
+				"args": [
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/MiniGolf": "/Users/louie/code/Unreal Projects/MiniGolf",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch MiniGolfEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "MiniGolfEditor Mac Development Build",
+				"args": [
+					"/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/MiniGolf": "/Users/louie/code/Unreal Projects/MiniGolf",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.6/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/louie/code/Unreal Projects/MiniGolf/MiniGolf.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64:${env:PATH}",
+					"DOTNET_ROOT": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64",
+					"DOTNET_HOST_PATH": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.6"
+			}
+		]
+	}
+}
